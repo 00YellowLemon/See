@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import LaunchImage from '../assets/technology/image-launch-vehicle-landscape.jpg'
 import LaunchImageFull from '../assets/technology/image-launch-vehicle-portrait.jpg'
 import PortImage from '../assets/technology/image-spaceport-landscape.jpg'
@@ -16,8 +16,7 @@ import Capsule from '../components/technology/Capsule'
 
 function Technology() {
 
-  const [theTech, setTheTech] = useState('') 
-  const [theTechImage, setTechImage] = useState('')
+
 
   useEffect(() => {
     let tech = document.querySelectorAll('.tech')
@@ -31,7 +30,7 @@ function Technology() {
         
         technology.addEventListener('click', (e) => {  
             console.log(technology)              
-            setTheTech(e.target.id)
+
             // Switch the image to the clicked tech
             let techImage = document.getElementById(e.target.id+'Image')
             if (techImage.classList.contains('selectedTechImage')) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Commander from './crew/Commander'
 import FlightEngineer from './crew/FlightEngineer'
 import MissionSpecialist from './crew/MissionSpecialist'
@@ -11,7 +11,6 @@ import Data from '../data.json'
 
 
 function Crew() {
-      const [thePerson, setThePerson] = useState('')
 
   useEffect(() => {
       let crew = document.querySelectorAll('.crew')
@@ -24,7 +23,6 @@ function Crew() {
         crew.forEach((person)=> {
             
             person.addEventListener('click', (e) => {  
-                setThePerson(e.target.id)
                 // Switch the image to the clicked person
                 let crewImage = document.getElementById(e.target.id+'Image')
                 if (crewImage.classList.contains('selectedCrewImage')) {

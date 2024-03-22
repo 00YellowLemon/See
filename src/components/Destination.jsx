@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Data from '../data.json'
 import Moon from './destination/Moon'
 import Mars from './destination/Mars'
@@ -11,8 +11,6 @@ import TitanImage from '../assets/destination/image-titan.webp'
 
 function Destination() {
 
-    const [thePlanets, setThePlanets] = useState('')
-    const [thePlanetImage, setThePlanetImage] = useState('')
    
     useEffect(() => {
         let planets = document.querySelectorAll('.planet')
@@ -26,7 +24,7 @@ function Destination() {
             
             planet.addEventListener('click', (e) => {  
                 console.log(planet)              
-                setThePlanets(e.target.id)
+
                 // Switch the image to the clicked planet
                 let planetImage = document.getElementById(e.target.id+'Image')
                 if (planetImage.classList.contains('selectedImage')) {

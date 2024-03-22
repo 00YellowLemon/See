@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import Logo from './header/Logo'
 import Hamburger from './header/Hamburger'
 import Menu from './header/Menu'

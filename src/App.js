@@ -8,7 +8,6 @@ import Technology from './components/Technology'
 
 function App() {
 
-  const [view, setView] = useState('home')
   const [exploreClicked, setExploreClicked] = useState(false)
 
   useEffect(()=>{
@@ -71,7 +70,6 @@ function App() {
             mainWrapper.classList.remove('destinationWrapperBackground')
         }
         let setLink = hyper.id.slice(4);
-        let newView = setLink;
         setLink = setLink + "Wrapper";
         setLink = document.getElementById(setLink);
         mainWrapper.classList.remove(selectedNav.id + "Background");
@@ -100,7 +98,7 @@ function App() {
         });
       });
     });
-  }, []);
+  }, [exploreClicked]);
 
   return (
     <div id='mainApp' className="App flex flex-col h-screen bg-[#000]">
